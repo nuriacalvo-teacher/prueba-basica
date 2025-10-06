@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de Inglés</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="app-container">
+            
+            <!-- PÁGINA 1: DATOS PERSONALES Y SELECCIÓN -->
+            <div id="page1" class="page page--active">
+                <h1 class="app-title">Ejercicios de Inglés</h1>
+                
+                <form id="personalDataForm" class="form-card">
+                    <div class="form-group">
+                        <label for="nombreInput" class="form-label">Nombre</label>
+                        <input 
+                            type="text" 
+                            id="nombreInput" 
+                            class="form-control" 
+                            placeholder="Ingresa tu nombre..." 
+                            required
+                        >
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="apellidoInput" class="form-label">Apellido</label>
+                        <input 
+                            type="text" 
+                            id="apellidoInput" 
+                            class="form-control" 
+                            placeholder="Ingresa tu apellido..." 
+                            required
+                        >
+                    </div>
+                    
+                    <div class="exercise-selection">
+                        <h3>Selecciona los ejercicios que deseas realizar:</h3>
+                        <div class="selection-buttons">
+                            <button type="button" id="selectPasados" class="btn btn--selection">
+                                <div class="selection-icon">📚</div>
+                                <div class="selection-title">Ejercicios de Pasados</div>
+                                <div class="selection-description">Pasado simple, continuo y perfecto</div>
+                            </button>
+                            <button type="button" id="selectFuturo" class="btn btn--selection">
+                                <div class="selection-icon">🚀</div>
+                                <div class="selection-title">Ejercicios de Futuro</div>
+                                <div class="selection-description">Will, going to, futuro continuo y perfecto</div>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                
+                <div id="messageArea1" class="message-area"></div>
+            </div>
+            
+            <!-- PÁGINA 2: EJERCICIO 1 PASADOS - MULTIPLE CHOICE -->
+            <div id="page2" class="page page--hidden">
+                <div class="section-header">
+                    <h2 class="section-title">EJERCICIOS DE PASADOS</h2>
+                    <div class="navigation-buttons">
+                        <button type="button" id="navToFuturo" class="btn btn--outline btn--sm">Ir a Futuro</button>
+                        <button type="button" id="navToResults" class="btn btn--outline btn--sm">Ver Resultados</button>
+                    </div>
+                </div>
+                
+                <div class="progress-indicator">
+                    <div class="progress-step progress-step--active">1</div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step">2</div>
+                </div>
+                
+                <h1 class="exercise-title">Ejercicio Nº1: Multiple Choice</h1>
+                <p class="exercise-subtitle">Elige la opción correcta</p>
+                
+                <form id="exercisePasados1Form" class="exercise-form">
+                    <div class="question-card">
+                        <p class="question-text"><strong>1.</strong> When I arrived at the station, the train ___________ already left.</p>
+                        <div class="options-grid">
+                            <label class="option-label">
+                                <input type="radio" name="q1" value="a" class="option-input">
+                                <span class="option-text">a) left</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q1" value="b" class="option-input">
+                                <span class="option-text">b) was leaving</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q1" value="c" class="option-input">
+                                <span class="option-text">c) had left</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q1" value="d" class="option-input">
+                                <span class="option-text">d) has left</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <p class="question-text"><strong>2.</strong> At 9 p.m. last night, I ___________ dinner.</p>
+                        <div class="options-grid">
+                            <label class="option-label">
+                                <input type="radio" name="q2" value="a" class="option-input">
+                                <span class="option-text">a) ate</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q2" value="b" class="option-input">
+                                <span class="option-text">b) was eating</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q2" value="c" class="option-input">
+                                <span class="option-text">c) had eaten</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q2" value="d" class="option-input">
+                                <span class="option-text">d) eat</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <p class="question-text"><strong>3.</strong> While I ___________ TV, my brother called me.</p>
+                        <div class="options-grid">
+                            <label class="option-label">
+                                <input type="radio" name="q3" value="a" class="option-input">
+                                <span class="option-text">a) watched</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q3" value="b" class="option-input">
+                                <span class="option-text">b) was watching</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q3" value="c" class="option-input">
+                                <span class="option-text">c) had watched</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q3" value="d" class="option-input">
+                                <span class="option-text">d) watch</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <p class="question-text"><strong>4.</strong> She ___________ all the emails before the meeting started.</p>
+                        <div class="options-grid">
+                            <label class="option-label">
+                                <input type="radio" name="q4" value="a" class="option-input">
+                                <span class="option-text">a) wrote</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q4" value="b" class="option-input">
+                                <span class="option-text">b) was writing</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q4" value="c" class="option-input">
+                                <span class="option-text">c) had written</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q4" value="d" class="option-input">
+                                <span class="option-text">d) writes</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="exercise-results hidden" id="exercisePasados1Results">
+                        <div class="results-card">
+                            <h3>Resultados del Ejercicio 1 - Pasados</h3>
+                            <div class="score-display">
+                                <span id="exercisePasados1Score">0</span>/10 puntos
+                            </div>
+                            <div id="exercisePasados1Feedback" class="feedback-list"></div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary btn--full-width">
+                        Revisar Respuestas
+                    </button>
+                    
+                    <button type="button" id="continueToPasados2" class="btn btn--primary btn--full-width hidden">
+                        Continuar al Ejercicio 2
+                    </button>
+                </form>
+            </div>
+            
+            <!-- PÁGINA 3: EJERCICIO 2 PASADOS - FILL IN THE GAPS -->
+            <div id="page3" class="page page--hidden">
+                <div class="section-header">
+                    <h2 class="section-title">EJERCICIOS DE PASADOS</h2>
+                    <div class="navigation-buttons">
+                        <button type="button" id="navToFuturo2" class="btn btn--outline btn--sm">Ir a Futuro</button>
+                        <button type="button" id="navToResults2" class="btn btn--outline btn--sm">Ver Resultados</button>
+                    </div>
+                </div>
+                
+                <div class="progress-indicator">
+                    <div class="progress-step progress-step--completed">1</div>
+                    <div class="progress-line progress-line--completed"></div>
+                    <div class="progress-step progress-step--active">2</div>
+                </div>
+                
+                <h1 class="exercise-title">Ejercicio Nº2: Rellenar Huecos</h1>
+                <p class="exercise-subtitle">Completa con la forma correcta del pasado</p>
+                
+                <form id="exercisePasados2Form" class="exercise-form">
+                    <div class="question-card">
+                        <p class="question-text"><strong>1.</strong> When we got to the cinema, the movie <input type="text" class="gap-input" name="gap1" placeholder="___________"> (already / start).</p>
+                    </div>
+
+                    <div class="question-card">
+                        <p class="question-text"><strong>2.</strong> I <input type="text" class="gap-input" name="gap2" placeholder="___________"> (read) a book when the phone rang.</p>
+                    </div>
+
+                    <div class="question-card">
+                        <p class="question-text"><strong>3.</strong> They <input type="text" class="gap-input" name="gap3" placeholder="___________"> (finish) the project before the boss arrived.</p>
+                    </div>
+
+                    <div class="question-card">
+                        <p class="question-text"><strong>4.</strong> Yesterday, she <input type="text" class="gap-input" name="gap4" placeholder="___________"> (walk) in the park when it started to rain.</p>
+                    </div>
+
+                    <div class="exercise-results hidden" id="exercisePasados2Results">
+                        <div class="results-card">
+                            <h3>Resultados del Ejercicio 2 - Pasados</h3>
+                            <div class="score-display">
+                                <span id="exercisePasados2Score">0</span>/10 puntos
+                            </div>
+                            <div id="exercisePasados2Feedback" class="feedback-list"></div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary btn--full-width">
+                        Revisar Respuestas
+                    </button>
+                    
+                    <button type="button" id="goToFuturoFromPasados" class="btn btn--primary btn--full-width hidden">
+                        Continuar a Ejercicios de Futuro
+                    </button>
+                </form>
+            </div>
+            
+            <!-- PÁGINA 4: EJERCICIO 1 FUTURO - MULTIPLE CHOICE -->
+            <div id="page4" class="page page--hidden">
+                <div class="section-header">
+                    <h2 class="section-title">EJERCICIOS DE FUTURO</h2>
+                    <div class="navigation-buttons">
+                        <button type="button" id="navToPasados" class="btn btn--outline btn--sm">Ir a Pasados</button>
+                        <button type="button" id="navToResults3" class="btn btn--outline btn--sm">Ver Resultados</button>
+                    </div>
+                </div>
+                
+                <div class="progress-indicator">
+                    <div class="progress-step progress-step--active">1</div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step">2</div>
+                </div>
+                
+                <h1 class="exercise-title">Ejercicio Nº1: Multiple Choice</h1>
+                <p class="exercise-subtitle">Elige la opción correcta</p>
+                
+                <form id="exerciseFuturo1Form" class="exercise-form">
+                    <div class="question-card">
+                        <p class="question-text"><strong>1.</strong> Look at those dark clouds! It ___________ rain soon.</p>
+                        <div class="options-grid">
+                            <label class="option-label">
+                                <input type="radio" name="q1" value="a" class="option-input">
+                                <span class="option-text">a) will</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q1" value="b" class="option-input">
+                                <span class="option-text">b) will be raining</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q1" value="c" class="option-input">
+                                <span class="option-text">c) will have rained</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q1" value="d" class="option-input">
+                                <span class="option-text">d) is going to</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <p class="question-text"><strong>2.</strong> By this time next year, I ___________ my degree.</p>
+                        <div class="options-grid">
+                            <label class="option-label">
+                                <input type="radio" name="q2" value="a" class="option-input">
+                                <span class="option-text">a) will finish</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q2" value="b" class="option-input">
+                                <span class="option-text">b) will be finishing</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q2" value="c" class="option-input">
+                                <span class="option-text">c) will have finished</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q2" value="d" class="option-input">
+                                <span class="option-text">d) am going to finish</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <p class="question-text"><strong>3.</strong> This time tomorrow, we ___________ on the beach.</p>
+                        <div class="options-grid">
+                            <label class="option-label">
+                                <input type="radio" name="q3" value="a" class="option-input">
+                                <span class="option-text">a) will relax</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q3" value="b" class="option-input">
+                                <span class="option-text">b) will be relaxing</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q3" value="c" class="option-input">
+                                <span class="option-text">c) will have relaxed</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q3" value="d" class="option-input">
+                                <span class="option-text">d) are going to relax</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <p class="question-text"><strong>4.</strong> I forgot to buy milk. I ___________ go to the store now.</p>
+                        <div class="options-grid">
+                            <label class="option-label">
+                                <input type="radio" name="q4" value="a" class="option-input">
+                                <span class="option-text">a) will</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q4" value="b" class="option-input">
+                                <span class="option-text">b) will be going</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q4" value="c" class="option-input">
+                                <span class="option-text">c) will have gone</span>
+                            </label>
+                            <label class="option-label">
+                                <input type="radio" name="q4" value="d" class="option-input">
+                                <span class="option-text">d) am going to</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="exercise-results hidden" id="exerciseFuturo1Results">
+                        <div class="results-card">
+                            <h3>Resultados del Ejercicio 1 - Futuro</h3>
+                            <div class="score-display">
+                                <span id="exerciseFuturo1Score">0</span>/10 puntos
+                            </div>
+                            <div id="exerciseFuturo1Feedback" class="feedback-list"></div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary btn--full-width">
+                        Revisar Respuestas
+                    </button>
+                    
+                    <button type="button" id="continueToFuturo2" class="btn btn--primary btn--full-width hidden">
+                        Continuar al Ejercicio 2
+                    </button>
+                </form>
+            </div>
+            
+            <!-- PÁGINA 5: EJERCICIO 2 FUTURO - FILL IN THE GAPS -->
+            <div id="page5" class="page page--hidden">
+                <div class="section-header">
+                    <h2 class="section-title">EJERCICIOS DE FUTURO</h2>
+                    <div class="navigation-buttons">
+                        <button type="button" id="navToPasados2" class="btn btn--outline btn--sm">Ir a Pasados</button>
+                        <button type="button" id="navToResults4" class="btn btn--outline btn--sm">Ver Resultados</button>
+                    </div>
+                </div>
+                
+                <div class="progress-indicator">
+                    <div class="progress-step progress-step--completed">1</div>
+                    <div class="progress-line progress-line--completed"></div>
+                    <div class="progress-step progress-step--active">2</div>
+                </div>
+                
+                <h1 class="exercise-title">Ejercicio Nº2: Rellenar Huecos</h1>
+                <p class="exercise-subtitle">Completa con la forma correcta del futuro</p>
+                
+                <form id="exerciseFuturo2Form" class="exercise-form">
+                    <div class="question-card">
+                        <p class="question-text"><strong>1.</strong> By 8 p.m., she <input type="text" class="gap-input" name="gap1" placeholder="___________"> (finish) her homework.</p>
+                    </div>
+
+                    <div class="question-card">
+                        <p class="question-text"><strong>2.</strong> Look at that car! It <input type="text" class="gap-input" name="gap2" placeholder="___________"> (hit) the fence if it keeps going that fast.</p>
+                    </div>
+
+                    <div class="question-card">
+                        <p class="question-text"><strong>3.</strong> Tomorrow at this time, we <input type="text" class="gap-input" name="gap3" placeholder="___________"> (travel) to Paris.</p>
+                    </div>
+
+                    <div class="question-card">
+                        <p class="question-text"><strong>4.</strong> I think I <input type="text" class="gap-input" name="gap4" placeholder="___________"> (call) my friend later, I miss talking to her.</p>
+                    </div>
+
+                    <div class="exercise-results hidden" id="exerciseFuturo2Results">
+                        <div class="results-card">
+                            <h3>Resultados del Ejercicio 2 - Futuro</h3>
+                            <div class="score-display">
+                                <span id="exerciseFuturo2Score">0</span>/10 puntos
+                            </div>
+                            <div id="exerciseFuturo2Feedback" class="feedback-list"></div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary btn--full-width">
+                        Revisar Respuestas
+                    </button>
+                    
+                    <button type="button" id="goToFinalResults" class="btn btn--primary btn--full-width hidden">
+                        Ver Resultados Finales
+                    </button>
+                </form>
+            </div>
+            
+            <!-- PÁGINA 6: RESULTADOS FINALES -->
+            <div id="page6" class="page page--hidden">
+                <h1 class="results-title">Resultados Finales</h1>
+                
+                <div class="final-results-card">
+                    <div class="student-info">
+                        <h2 id="studentName">Estudiante: [Nombre] [Apellido]</h2>
+                    </div>
+                    
+                    <div class="scores-summary">
+                        <div class="section-score">
+                            <h3 class="section-score-title">Ejercicios de Pasados</h3>
+                            <div class="score-item">
+                                <span class="score-label">Ejercicio 1 (Multiple Choice):</span>
+                                <span class="score-value" id="finalScorePasados1">0/10</span>
+                            </div>
+                            <div class="score-item">
+                                <span class="score-label">Ejercicio 2 (Rellenar Huecos):</span>
+                                <span class="score-value" id="finalScorePasados2">0/10</span>
+                            </div>
+                            <div class="subtotal-score">
+                                <span class="score-label">Puntuación Pasados:</span>
+                                <span class="score-value" id="totalScorePasados">0/10</span>
+                            </div>
+                        </div>
+                        
+                        <div class="section-score">
+                            <h3 class="section-score-title">Ejercicios de Futuro</h3>
+                            <div class="score-item">
+                                <span class="score-label">Ejercicio 1 (Multiple Choice):</span>
+                                <span class="score-value" id="finalScoreFuturo1">0/10</span>
+                            </div>
+                            <div class="score-item">
+                                <span class="score-label">Ejercicio 2 (Rellenar Huecos):</span>
+                                <span class="score-value" id="finalScoreFuturo2">0/10</span>
+                            </div>
+                            <div class="subtotal-score">
+                                <span class="score-label">Puntuación Futuro:</span>
+                                <span class="score-value" id="totalScoreFuturo">0/10</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="completion-status">
+                        <div class="status-item">
+                            <span class="status-label">Ejercicios de Pasados:</span>
+                            <span class="status-value" id="statusPasados">No completado</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-label">Ejercicios de Futuro:</span>
+                            <span class="status-value" id="statusFuturo">No completado</span>
+                        </div>
+                    </div>
+                    
+                    <button id="sendResults" class="btn btn--primary btn--full-width" disabled>
+                        <span id="sendText">Enviar Resultados (Completa ambas secciones)</span>
+                        <span id="sendingText" class="hidden">
+                            <span class="loading-spinner"></span>
+                            Enviando...
+                        </span>
+                    </button>
+                    
+                    <div id="sendResultsMessage" class="message-area"></div>
+                    
+                    <div class="navigation-final">
+                        <button type="button" id="backToPasados" class="btn btn--outline">Volver a Pasados</button>
+                        <button type="button" id="backToFuturo" class="btn btn--outline">Volver a Futuro</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
